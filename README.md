@@ -1,3 +1,19 @@
+<p align="center">
+  <img src="./assets/dbabridge-logo.png" alt="DBA Bridge" width="280" />
+</p>
+
+<p align="center">
+  <strong>Know exactly what will break before you migrate.</strong>
+</p>
+
+<p align="center">
+  <a href="https://dbabridge.com">Website</a> ·
+  <a href="mailto:info@ai2innovate.io">Email</a> ·
+  <a href="https://ai2innovate.io">AI2Innovate</a>
+</p>
+
+---
+
 # DBA Bridge
 
 > Know exactly what will break before you migrate.
@@ -239,8 +255,6 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a PR.
 |-|-|
 | Website | [dbabridge.com](https://dbabridge.com) |
 | Company | [AI2Innovate](https://ai2innovate.io) |
-| Cloud AI | [multimind.dev](https://multimind.dev) |
-| Discord | [discord.gg/K64U65je7h](https://discord.gg/K64U65je7h) |
 | Email | info@ai2innovate.io |
 
 ---
