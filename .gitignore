@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+.env
+.venv
+env/
+venv/
+ENV/
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+*.cover
+coverage.xml
+
+# Tauri / Rust
+target/
+Cargo.lock
+src-tauri/target/
+
+# Node / React
+node_modules/
+.next/
+out/
+dist/
+.turbo/
+*.tsbuildinfo
+.eslintcache
+.npm
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+config.local.*
+
+# Database connection files (never commit these)
+*.db
+*.sqlite
+*.sqlite3
+connections.json
+connections.local.json
+
+# Test outputs and migration artifacts
+reports/
+output/
+*.migration.log
+*.audit.json
+*.audit.html
+*.validation.pdf
+schema-dumps/
+test-data/
+
+# Ollama model cache (large, not for repo)
+.ollama/
+
+# Release builds
+releases/
+*.dmg
+*.exe
+*.AppImage
+*.deb
+*.rpm
+*.zip
