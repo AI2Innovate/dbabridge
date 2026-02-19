@@ -48,6 +48,44 @@ Your app breaks after cutover. There is no report. No explanation. No evidence p
 
 ---
 
+## Features
+
+### Available at Launch
+- **Pre-Migration Audit Report** — scans every table, column, stored procedure, trigger, index, sequence, and constraint. Outputs risk score (Low / Medium / High / Critical), FK dependency graph, and estimated migration time. HTML + PDF output.
+- **Data Type Mapping Engine** — rules-based mapping for every Oracle and SQL Server type to Postgres equivalents. Handles edge cases: Oracle `DATE` includes time, `NUMBER` precision, `NVARCHAR` collation differences, `BLOB` → `BYTEA`.
+- **FK Dependency Graph** — calculates correct table migration order using topological sort. Detects circular dependencies. Re-enables constraints in the correct sequence after data load.
+- **Stored Procedure Rewriter** — rewrites Oracle PL/SQL and SQL Server T-SQL to Postgres PL/pgSQL. Side-by-side diff with confidence score per line. You approve every change. Runs locally via Ollama — code never leaves your machine.
+- **Index & Trigger Analysis** — flags function-based indexes, bitmap indexes, and incompatible triggers with specific recommended actions per object.
+- **Post-Migration Validation Report** — compares source and target after migration: row counts, null distributions, constraint status, index presence, sequence values, synthetic query diff. Per-table 🟢 / 🟡 / 🔴 output.
+- **Manual Script Validation** — validate your own SQL migration scripts for errors and incompatibilities before running them.
+- **Local AI via Ollama** — stored procedure rewriting runs fully offline. GDPR-safe. Air-gap compatible. No API key needed.
+- **Cloud AI via multimind.dev** — optional hosted AI for faster processing on large procedure sets. No Ollama install required.
+- **Desktop App (Mac / Windows / Linux)** — native app built with Tauri. Download and run like DBeaver. No cloud account. No terminal.
+
+### Coming in Phase 2
+- **Dry Run Mode** — simulate the full migration against a read-only source. Shows every error that would occur without touching production.
+- **Migration Health Dashboard** — visual per-table progress, throughput metrics, exportable PDF for stakeholders.
+- **Schema Version Control** — save schema snapshots before and after migration, diff two snapshots, generate rollback instructions.
+- **MySQL / MariaDB source support**
+
+### Coming in Phase 3
+- **NoSQL → SQL migration** — MongoDB, DynamoDB, Cassandra → PostgreSQL / Supabase. Schema inference, document flattening, composite key mapping.
+- **Cloud warehouse targets** — Snowflake and BigQuery as migration targets. Stored procedures rewritten as dbt models.
+- **Incremental / CDC mode** — keep source and target in sync during cutover window. Eliminates downtime for large databases.
+- **Open Source Connector SDK** — build and publish community connectors via PyPI.
+
+### Coming in Phase 4
+- **PII Detection + Data Masking** — auto-detects email, SSN, credit card, phone, passport columns. Masking options: pseudonymisation, tokenisation, redaction, hashing. GDPR / HIPAA / CCPA / PCI DSS.
+- **ORM Compatibility Checker** — scans target schema for patterns that break Hibernate, SQLAlchemy, Prisma, ActiveRecord, GORM, TypeORM.
+- **Compliance Report Generator** — signed PDF audit trail for regulators. Proves data completeness, integrity, PII handling, and sign-off chain.
+- **Blue / Green Migration Mode** — migrate to a standby database while production stays live. CDC sync. One-click cutover. Instant rollback.
+- **Migration Planner AI** — upload a schema, receive a full migration plan with risk scores, time estimates, and recommended approach in under 60 seconds.
+- **Migration Knowledge Graph** — every approved stored procedure rewrite trains a local knowledge base. The rewriter gets smarter with every migration.
+- **Team Collaboration** — role-based access, audit log, comment threads on AI suggestions, approval workflows.
+- **Self-Hosted Enterprise** — Docker / Kubernetes, air-gapped, bring your own LLM.
+
+---
+
 ## What It Does
 
 ### 1. Pre-Migration Audit Report
